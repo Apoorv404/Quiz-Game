@@ -1,29 +1,37 @@
 # Quiz-Game
 
-A text-based quiz game implemented in Python using Object-Oriented Programming principles. The game presents users with True/False questions and tracks their score.
+A quiz game implemented in Python using Object-Oriented Programming principles. The game presents users with True/False questions and tracks their score through an interactive graphical interface.
 
 ## Features
 
 - Multiple True/False questions
 - Score tracking
 - Question numbering
-- Immediate feedback on answers
+- Immediate visual feedback on answers
 - Final score summary
+- Graphical User Interface
+- Interactive buttons for True/False responses
+- Visual feedback with correct/incorrect indicators
 
 ## Concepts implemented
 - Object-Oriented Programming
-- Classes
-- Methods
-- Attributes
-- List
+- Classes and Inheritance
+- Methods and Attributes
+- Tkinter GUI Programming
+- Event Handling
+- List Operations
 - for Loop, while Loop
 
 ## Project Structure
 
-- [`main.py`](main.py): Main game logic and execution
-- [`question_model.py`](question_model.py): Question class definition
-- [`quiz_brain.py`](quiz_brain.py): QuizBrain class handling game mechanics
-- [`data.py`](data.py): Question data stored in dictionary format
+- `main.py`: Main game logic and execution
+- `question_model.py`: Question class definition
+- `quiz_brain.py`: QuizBrain class handling game mechanics
+- `data.py`: Question data stored in dictionary format
+- `ui.py`: User interface implementation using Tkinter
+- `images/`: Directory containing UI assets
+  - `true.png`: Image for true button
+  - `false.png`: Image for false button
 
 ## Classes
 
@@ -40,43 +48,24 @@ A text-based quiz game implemented in Python using Object-Oriented Programming p
   - `next_question()`: Presents next question to user
   - `check_answer()`: Verifies user's answer and updates score
 
+### QuizInterface
+- Handles the graphical user interface
+- Features:
+  - Dynamic question display
+  - Interactive True/False buttons
+  - Visual feedback for answers
+  - Score display
+  - Automatic question progression
+
 ## How to Play
 
 1. Run the `main.py` script
-2. Answer each question with "True" or "False"
-3. Get immediate feedback on your answer
-4. See your current score after each question
-5. View your final score when the quiz ends
-
-## Example Usage
-
-```python
-Q.1: A slug's blood is green. (True/False): True
-You got it right!
-The correct answer was True
-Your current score: 1/1
-
-Q.2: The loudest animal is the African Elephant. (True/False): False
-You got it right!
-The correct answer was False
-Your current score: 2/2
-
-...
-
-You've completed the quiz.
-Your final score: 8/12
-```
-
-## Question Database
-
-The quiz includes questions on various topics including:
-- Animal facts
-- Human anatomy
-- Geography
-- Technology
-- History
+2. Click the True or False button to answer each question
+3. Receive immediate visual feedback on your answer
+4. Watch your score update in real-time
+5. Continue until all questions are answered
 
 ## Dependencies
 
 - Python 3.x
-- No external libraries required
+- Tkinter (included in standard Python installation)
